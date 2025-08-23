@@ -5,15 +5,6 @@ This repository is a **progressive roadmap of 100 VHDL projects**, starting from
 The projects are divided into **7 stages**, each focusing on a new concept (combinational, sequential, memory, arithmetic, state machines, interfaces, and integration).  
 The goal: **learn VHDL by building**, one step at a time.  
 
-
-
-##  Repo Structure
-Each project has:
-- `design.vhd` → main VHDL design  
-- `tb_design.vhd` → testbench  
-- `README.md` → explanation, I/O description, and simulation notes  
-
-
 ##  Project Roadmap
 
 ### Stage 1 – Combinational Basics (no clock yet)
