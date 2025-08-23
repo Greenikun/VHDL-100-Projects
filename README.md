@@ -18,7 +18,7 @@ Focus: Boolean logic, concurrent assignments, with `select`, `when`, `generate`.
 - [x] [XOR gate](https://github.com/TheChipMaker/95_XOR_GATE)
 - [x] [XNOR gate](https://github.com/TheChipMaker/94_XNOR_GATE)
 - [x] [2-input multiplexer (2:1 MUX)](https://github.com/TheChipMaker/93_2to1_MUX)
-- [ ] 4-input multiplexer (4:1 MUX)  
+- [x] [4-input multiplexer (4:1 MUX)](https://github.com/TheChipMaker/92_4to1_MUX).
 - [ ] 8-input multiplexer (8:1 MUX)  
 - [ ] 1-to-2 demultiplexer  
 - [ ] 1-to-4 demultiplexer  
