@@ -10,16 +10,16 @@ The goal: **learn VHDL by building**, one step at a time.
 ### Stage 1 – Combinational Basics (no clock yet)
 Focus: Boolean logic, concurrent assignments, with `select`, `when`, `generate`.
 
-- [x] [AND gate](https://github.com/TheChipMaker/100_AND_GATE)
-- [x] [OR gate](https://github.com/TheChipMaker/99_OR_GATE)
-- [x] [NOT gate](https://github.com/TheChipMaker/98_NOT_GATE)
-- [x] [NAND gate](https://github.com/TheChipMaker/97_NAND_GATE)
-- [x] [NOR gate](https://github.com/TheChipMaker/96_NOR_GATE)
-- [x] [XOR gate](https://github.com/TheChipMaker/95_XOR_GATE)
-- [x] [XNOR gate](https://github.com/TheChipMaker/94_XNOR_GATE)
-- [x] [2-input multiplexer (2:1 MUX)](https://github.com/TheChipMaker/93_2to1_MUX)
+- [x] [AND gate](https://github.com/TheChipMaker/100_AND_GATE).
+- [x] [OR gate](https://github.com/TheChipMaker/99_OR_GATE).
+- [x] [NOT gate](https://github.com/TheChipMaker/98_NOT_GATE).
+- [x] [NAND gate](https://github.com/TheChipMaker/97_NAND_GATE).
+- [x] [NOR gate](https://github.com/TheChipMaker/96_NOR_GATE).
+- [x] [XOR gate](https://github.com/TheChipMaker/95_XOR_GATE).
+- [x] [XNOR gate](https://github.com/TheChipMaker/94_XNOR_GATE).
+- [x] [2-input multiplexer (2:1 MUX)](https://github.com/TheChipMaker/93_2to1_MUX).
 - [x] [4-input multiplexer (4:1 MUX)](https://github.com/TheChipMaker/92_4to1_MUX).
-- [ ] 8-input multiplexer (8:1 MUX)  
+- [x] [8-input multiplexer (8:1 MUX)](https://github.com/TheChipMaker/91_8to1_MUX).
 - [ ] 1-to-2 demultiplexer  
 - [ ] 1-to-4 demultiplexer  
 - [ ] 2-to-4 decoder  
