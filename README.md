@@ -21,7 +21,7 @@ Focus: Boolean logic, concurrent assignments, with `select`, `when`, `generate`.
 - [x] [4-input multiplexer (4:1 MUX)](https://github.com/TheChipMaker/92_4to1_MUX).
 - [x] [8-input multiplexer (8:1 MUX)](https://github.com/TheChipMaker/91_8to1_MUX).
 - [x] [1-to-2 demultiplexer](https://github.com/TheChipMaker/90_1to2_deMUX).
-- [ ] 1-to-4 demultiplexer  
+- [x] [1-to-4 demultiplexer](https://github.com/TheChipMaker/89_1to4_deMUX).
 - [ ] 2-to-4 decoder  
 - [ ] 3-to-8 decoder  
 - [ ] Priority encoder (4-to-2)  
