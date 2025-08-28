@@ -1,5 +1,5 @@
 # VHDL 100 Projects 
-
+ 
 This repository is a **progressive roadmap of 100 VHDL projects**, starting from simple logic gates up to designing a **mini CPU and SoC**.  
 
 The projects are divided into **7 stages**, each focusing on a new concept (combinational, sequential, memory, arithmetic, state machines, interfaces, and integration).  
