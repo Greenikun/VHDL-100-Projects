@@ -24,7 +24,7 @@ Focus: Boolean logic, concurrent assignments, with `select`, `when`, `generate`.
 - [x] [1-to-4 demultiplexer](https://github.com/TheChipMaker/89_1to4_deMUX).
 - [x] [2-to-4 decoder](https://github.com/TheChipMaker/88_Decoder2to4).
 - [x] [3-to-8 decoder](https://github.com/TheChipMaker/87_Decoder3to8).
-- [ ] Priority encoder (8-to-2)  
+- [x] [Priority encoder (8-to-2)](https://github.com/TheChipMaker/86_Priority_Encoder). 
 - [ ] 7-segment display driver (for 0–9)  
 - [ ] Binary to Gray code converter  
 - [ ] Gray code to binary converter  
