@@ -1,5 +1,13 @@
 # 1-to-2 Demultiplexer (VHDL Project)
 
+![Gray to Binary](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
+![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
+![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Testbench%20Self%20Checking-No-red)
+
 This project implements an **8-bit 1-to-2 demultiplexer** in VHDL.  
 The demultiplexer routes an input vector `D` to one of two outputs (`O1`, `O2`) depending on the select line `S`.  
 
