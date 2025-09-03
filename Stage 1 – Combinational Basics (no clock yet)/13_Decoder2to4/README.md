@@ -18,8 +18,7 @@ This project implements a **2-to-4 line decoder with enable input** in VHDL. The
 |------|-------------|
 | `Decoder2to4.vhd` | VHDL implementation of the 2-to-4 decoder |
 | `Decoder2to4_tb.vhd` | Testbench to verify functionality |
-| `.gitignore` | Ignore build, backup, and OS junk files |
-| `.vscode/` | VS Code settings |
+
 
 
 ## How to Simulate in ModelSim
