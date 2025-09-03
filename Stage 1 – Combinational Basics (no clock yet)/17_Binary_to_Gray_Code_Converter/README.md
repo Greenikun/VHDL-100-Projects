@@ -1,5 +1,13 @@
 # Binary to Gray Code Converter (VHDL)
 
+![Gray to Binary](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
+![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
+![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Testbench%20Self%20Checking-No-red)
+
 A **parameterizable Binary to Gray Code converter** written in VHDL.  
 This project is synthesizable and suitable for **Synopsys tools**, and simulation is done using **ModelSim**.
 
