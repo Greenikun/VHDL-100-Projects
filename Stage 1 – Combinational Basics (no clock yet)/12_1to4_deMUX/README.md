@@ -19,11 +19,6 @@ This project is part of my VHDL learning roadmap, aimed at building **100 VHDL p
 |------|-------------|
 | `deMUX1to4.vhd` | VHDL implementation of the 1-to-4 demux |
 | `deMUX1to4_tb.vhd` | Testbench to verify functionality |
-| `deMUX1to4.mpf` | ModelSim project file |
-| `vsim.wlf` | ModelSim waveform file |
-| `.vscode/` | VS Code settings |
-
-
 
 ## How to Simulate in ModelSim
 
