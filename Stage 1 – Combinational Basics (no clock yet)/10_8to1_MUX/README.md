@@ -25,8 +25,7 @@ This project is part of my **100 VHDL Projects Roadmap**, progressing from basic
 ## Files
 - `MUX8to1.vhd` – VHDL source for the multiplexer
 - `MUX8to1_tb.vhd` – Testbench for simulation
-- `MUX8to1.mpf` – ModelSim project file (contains simulation setup)
-- `.gitignore` – Ignore tool-generated files
+
 
 ## Simulation
 This project was tested using **ModelSim**.
