@@ -1,5 +1,13 @@
 # Seven Segment Display Driver (0–9) – VHDL Project
 
+![Gray to Binary](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
+![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
+![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Testbench%20Self%20Checking-No-red)
+
 ## Project Overview
 This project implements a **7-segment display driver** in VHDL that takes a 4-bit binary input (0–9) and generates the corresponding active-high segment outputs (`a–g`).  
 The design is purely **combinational** and verified using ModelSim.
