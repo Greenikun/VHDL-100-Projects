@@ -1,9 +1,0 @@
-# Ignore ModelSim simulation folders
-work/
-
-# Do NOT ignore .wlf files; we want to include them
-# *.wlf   <-- leave this out
-
-# Ignore OS-specific files
-.DS_Store
-Thumbs.db
