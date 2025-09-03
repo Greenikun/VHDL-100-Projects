@@ -2,9 +2,7 @@
 
 Welcome to the **VHDL 100 Projects** repository! This collection presents a structured progression of **VHDL projects**, ranging from basic logic gates to a fully functional **mini CPU and SoC**. Each project is **fully synthesizable** and tested using **ModelSim simulations**, providing both the VHDL source code and accompanying test benches.  
 
-This repository serves as a comprehensive resource for anyone looking to learn or reference **VHDL**, **FPGA design**, or digital system development.  
-
-Explore the complete project list and implementations here: [VHDL 100 Projects List](https://github.com/TheChipMaker/VHDL-100-Projects-List)
+This repository serves as a comprehensive resource for anyone looking to learn or reference **VHDL**, **FPGA design**, or digital system development.
 
 
 ## Project List
