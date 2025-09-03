@@ -15,6 +15,7 @@
 # OS files
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # other
 Projects List.gdoc
