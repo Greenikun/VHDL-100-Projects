@@ -12,25 +12,25 @@ Explore the complete project list and implementations here: [VHDL 100 Projects L
 ### Stage 1 – Combinational Basics (no clock yet)  
 *Focus: Boolean logic, concurrent assignments, and basic combinational structures.*
 
-- [ ] 1. AND gate  
-- [ ] 2. OR gate  
-- [ ] 3. NOT gate  
-- [ ] 4. NAND gate  
-- [ ] 5. NOR gate  
-- [ ] 6. XOR gate  
-- [ ] 7. XNOR gate  
-- [ ] 8. 2-input multiplexer (2:1 MUX)  
-- [ ] 9. 4-input multiplexer (4:1 MUX)  
-- [ ] 10. 8-input multiplexer (8:1 MUX)  
-- [ ] 11. 1-to-2 demultiplexer  
-- [ ] 12. 1-to-4 demultiplexer  
-- [ ] 13. 2-to-4 decoder  
-- [ ] 14. 3-to-8 decoder  
-- [ ] 15. Priority encoder (4-to-2)  
-- [ ] 16. 7-segment display driver (0–9)  
-- [ ] 17. Binary to Gray code converter  
-- [ ] 18. Gray code to binary converter  
-- [ ] 19. 4-bit comparator  
+- [x] [1. AND gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/01_AND_GATE/).
+- [x] [2. OR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/02_OR_GATE/).
+- [x] [3. NOT gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/03_NOT_Gate/).
+- [x] [4. NAND gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/04_NAND_Gate/).
+- [x] [5. NOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/05_NOR_GATE/).
+- [x] [6. XOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/06_XOR_GATE/).
+- [x] [7. XNOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/07_XNOR_GATE/).
+- [x] [8. 2-input multiplexer (2:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/08_2to1_MUX/).
+- [x] [9. 4-input multiplexer (4:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/09_4to1_MUX/).
+- [x] [10. 8-input multiplexer (8:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/10_8to1_MUX/).
+- [x] [11. 1-to-2 demultiplexer](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/11_1to2_deMUX/).
+- [x] [12. 1-to-4 demultiplexer](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/12_1to4_deMUX/).
+- [x] [13. 2-to-4 decoder](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/13_Decoder2to4/).
+- [x] [14. 3-to-8 decoder](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/14_Decoder3to8/).
+- [x] [15. Priority encoder (4-to-2)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/15_Priority_Encoder/).
+- [x] [16. 7-segment display driver (0–9)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/16_SevenSeg_Driver/).
+- [x] [17. Binary to Gray code converter](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/17_Binary_to_Gray_Code_Converter/).
+- [x] [18. Gray code to binary converter](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/18_Gray_Code_to_Binary_Converter/).
+- [ ] 19. 4-bit comparator
 - [ ] 20. 8-bit comparator  
 - [ ] 21. Half adder  
 - [ ] 22. Full adder  
