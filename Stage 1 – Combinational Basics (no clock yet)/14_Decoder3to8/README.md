@@ -15,10 +15,7 @@ This project implements a **3-to-8 line decoder with enable input** in VHDL. The
 |------|-------------|
 | `Decoder3to8.vhd` | VHDL implementation of the 3-to-8 decoder |
 | `Decoder3to8_tb.vhd` | Testbench to verify functionality |
-| `Decoder3to8.mpf` | ModelSim project file |
-| `vsim.wlf` | ModelSim waveform database file |
-| `.gitignore` | Ignore build, backup, and OS junk files |
-| `.vscode/` | VS Code settings |
+
 
 ## How to Simulate in ModelSim
 
