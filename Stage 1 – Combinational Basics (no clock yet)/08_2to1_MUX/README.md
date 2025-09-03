@@ -1,5 +1,13 @@
 # 2-to-1 Multiplexer (VHDL)
 
+![Gray to Binary](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
+![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
+![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Testbench%20Self%20Checking-No-red)
+
 ## Project Overview
 This project implements a **2-to-1 Multiplexer (MUX)** in **VHDL**.  
 A multiplexer is a digital switch that selects one of two inputs (`A` or `B`) based on a select line (`S`) and forwards it to the output (`Y`).
