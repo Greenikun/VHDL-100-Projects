@@ -4,13 +4,13 @@ This project implements and tests a **4-to-1 multiplexer** in VHDL.
 The design is verified using a self-checking **testbench** with exhaustive simulation.
 
 
-## 📘 Project Structure
+## Project Structure
 
 - **`_4to1_MUX.vhd`** – VHDL source code for the 4-to-1 multiplexer.  
 - **`_4to1_MUX_tb.vhd`** – Testbench for verifying the multiplexer.  
 
 
-## 🔧 Design Description
+## Design Description
 
 ### Multiplexer (MUX4to1)
 - **Inputs**:  
@@ -32,7 +32,7 @@ The design is verified using a self-checking **testbench** with exhaustive simul
 
 ---
 
-## ▶️ How to Run in ModelSim (Terminal)
+## How to Run in ModelSim (Terminal)
 
 1. Open a terminal in the project folder:
     ```bash
