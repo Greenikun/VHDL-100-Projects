@@ -1,6 +1,6 @@
 # 2-to-1 Multiplexer (VHDL)
 
-## 📌 Project Overview
+## Project Overview
 This project implements a **2-to-1 Multiplexer (MUX)** in **VHDL**.  
 A multiplexer is a digital switch that selects one of two inputs (`A` or `B`) based on a select line (`S`) and forwards it to the output (`Y`).
 
@@ -12,14 +12,14 @@ A multiplexer is a digital switch that selects one of two inputs (`A` or `B`) ba
 | 1          | A | B | B           |
 
 
-## 📂 Files in this Repository
+## Files in this Repository
 - **`_2to1_MUX.vhd`** → VHDL source code (Design Under Test - DUT)  
 - **`_2to1_MUX_tb.vhd`** → VHDL testbench for simulation  
 
 
 
 
-## 🛠️ Simulation Instructions (ModelSim)
+## Simulation Instructions (ModelSim)
 1. Open ModelSim.  
 2. Create or open the project and add the VHDL files.  
 3. From the Transcript, run:
