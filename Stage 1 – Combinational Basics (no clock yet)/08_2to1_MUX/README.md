@@ -15,10 +15,7 @@ A multiplexer is a digital switch that selects one of two inputs (`A` or `B`) ba
 ## 📂 Files in this Repository
 - **`_2to1_MUX.vhd`** → VHDL source code (Design Under Test - DUT)  
 - **`_2to1_MUX_tb.vhd`** → VHDL testbench for simulation  
-- **`wave.do`** → ModelSim waveform configuration  
-- **`vsim.wlf`** → Simulation waveform log (can be regenerated)  
-- **`93_2to1_MUX.mpf`** → ModelSim project file  
-- **`transcript`** → Simulation log file  
+
 
 
 
