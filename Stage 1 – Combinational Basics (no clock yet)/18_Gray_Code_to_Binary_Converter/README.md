@@ -1,7 +1,7 @@
 # Gray Code to Binary Converter
 
 ![Gray to Binary](https://img.shields.io/badge/Status-Completed-brightgreen)
-![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
 ![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
 ![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
