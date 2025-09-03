@@ -8,10 +8,7 @@ The design is verified using a self-checking **testbench** with exhaustive simul
 
 - **`_4to1_MUX.vhd`** – VHDL source code for the 4-to-1 multiplexer.  
 - **`_4to1_MUX_tb.vhd`** – Testbench for verifying the multiplexer.  
-- **`_4to1_MUX.mpf`** – ModelSim project file.  
-- **`transcript`** – Simulation log (not tracked in Git).  
-- **`vsim.wlf`** – Simulation waveform file (not tracked in Git).  
-- **`work/`** – ModelSim working directory (not tracked in Git).
+
 
 ## 🔧 Design Description
 
