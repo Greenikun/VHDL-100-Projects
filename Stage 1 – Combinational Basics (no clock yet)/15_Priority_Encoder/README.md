@@ -10,12 +10,8 @@ This project is **synthesizable** and suitable for **Synopsys tools**, and simul
 
 
 ## Files
-- `.vscode/` – VS Code settings (optional for workspace configuration)  
-- `work/` – ModelSim compiled library folder (generated after compilation)  
-- `PriorityEncoder8to3.mpf` – ModelSim project file  
 - `PriorityEncoder8to3.vhd` – VHDL source code for the encoder  
 - `PriorityEncoder8to3_tb.vhd` – Testbench file for simulation  
-- `vsim.wlf` – ModelSim waveform file (simulation results)  
 
 
 
