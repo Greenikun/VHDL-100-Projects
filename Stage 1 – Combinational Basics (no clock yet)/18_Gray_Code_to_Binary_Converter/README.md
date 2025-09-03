@@ -6,6 +6,7 @@
 ![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Testbench%20Self%20Checking-Yes-red)
 
 A **VHDL project** that converts Gray code to Binary code. Part of the **VHDL 100 Projects** series under *Stage 1 – Combinational Basics (no clock yet)*.
 
