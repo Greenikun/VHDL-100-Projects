@@ -1,0 +1,22 @@
+# VS Code
+.vscode/
+
+# ModelSim
+*.wlf
+*.do
+*.history
+*.tmp
+*.o
+*.vho
+*.cf
+*.exe
+*.trn
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# other
+Projects List.gdoc
+Prompt.txt
+Task.txt
