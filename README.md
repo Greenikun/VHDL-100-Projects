@@ -1,5 +1,12 @@
 # VHDL 100 Projects: From AND gate to CPUs and SOCs
 
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
+![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
+![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+
 Welcome to the **VHDL 100 Projects** repository! This collection presents a structured progression of **VHDL projects**, ranging from basic logic gates to a fully functional **mini CPU and SoC**. Each project is **fully synthesizable** and tested using **ModelSim simulations**, providing both the VHDL source code and accompanying test benches.  
 
 This repository serves as a comprehensive resource for anyone looking to learn or reference **VHDL**, **FPGA design**, or digital system development.
