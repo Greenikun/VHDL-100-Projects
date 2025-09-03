@@ -7,9 +7,7 @@ The demultiplexer routes an input vector `D` to one of two outputs (`O1`, `O2`) 
 ## Project Structure
 - `deMUX1to2.vhd` → RTL design (8-bit 1-to-2 demux)  
 - `deMUX1to2_tb.vhd` → Testbench with full coverage  
-- `.gitignore` → Ignore ModelSim/VSCode temporary files  
-- `vsim.wlf` → ModelSim waveform database (auto-generated, ignored in git)  
-- `deMUX1to2.mpf` → ModelSim project file (auto-generated, ignored in git)
+
 
 
 
