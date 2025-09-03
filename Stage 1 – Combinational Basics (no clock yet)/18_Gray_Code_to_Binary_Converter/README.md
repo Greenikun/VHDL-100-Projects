@@ -5,8 +5,6 @@
 ![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
 ![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Repo Size](https://img.shields.io/github/repo-size/TheChipMaker/VHDL-100-Projects)
-![Lines of Code](https://img.shields.io/tokei/lines/github/TheChipMaker/VHDL-100-Projects)
 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
 
 A **VHDL project** that converts Gray code to Binary code. Part of the **VHDL 100 Projects** series under *Stage 1 – Combinational Basics (no clock yet)*.
