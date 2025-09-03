@@ -1,5 +1,13 @@
 # 8-to-3 Priority Encoder VHDL Project
 
+![Gray to Binary](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
+![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
+![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Testbench%20Self%20Checking-No-red)
+
 ## Project Overview
 This project implements an **8-to-3 priority encoder** in VHDL.  
 The encoder takes an 8-bit input vector `A` and outputs the binary code of the **highest-priority input** as a 3-bit vector `Y`.  
