@@ -1,5 +1,13 @@
 # 8-to-1 Multiplexer
 
+![Gray to Binary](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Synthesizable](https://img.shields.io/badge/Synthesizable-Yes-brightgreen)
+![VHDL](https://img.shields.io/badge/Language-VHDL-blue)
+![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Testbench%20Self%20Checking-No-red)
+
 ## Overview
 This project implements an **8-to-1 multiplexer** in VHDL.  
 A multiplexer (MUX) is a digital switch that selects one of several input signals and forwards it to a single output line.  
