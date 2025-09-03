@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "CMake: configure",
+			"command": "configure",
+			"problemMatcher": [],
+			"detail": "CMake template configure task",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Init Library",
+			"type": "shell",
+			"command": "vlib",
+			"args": [
+				"work"
+			]
+		},
+		{
+			"label": "Compile VHDL",
+			"type": "shell",
+			"command": "vcom",
+			"args": [
+				"${file}"
+			],
+			"dependsOn": [
+				"Init Library"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			}
+		},
+		{
+			"type": "cmake",
+			"label": "CMake: configure",
+			"command": "configure",
+			"problemMatcher": [],
+			"detail": "CMake template configure task"
+		}
+	]
+}

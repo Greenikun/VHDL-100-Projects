@@ -1,0 +1,16 @@
+# Ignore ModelSim simulation folders
+work/
+
+# Keep waveform and project config files
+!*.wlf
+
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary editor or IDE files
+*.log
+*.bak
+*.tmp
+*.swp

@@ -1,0 +1,37 @@
+# ============================
+# VHDL Project Git Ignore
+# ============================
+
+# Simulation and compilation outputs
+/work
+/transcript
+/vsim.wlf
+/questa_libs/
+/modelsim.ini
+
+# Synopsys / tool-specific junk
+*.synlog
+*.sdf
+*.mr
+*.log
+*.jou
+*.pb
+*.str
+*.dcp
+*.ncd
+*.ngc
+*.xst
+
+
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~

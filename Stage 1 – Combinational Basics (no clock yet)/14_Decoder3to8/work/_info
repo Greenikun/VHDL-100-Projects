@@ -1,0 +1,92 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/anabi/My Drive/Projects/VHDL/Projects/87 Decoder3to8/87_Decoder3to8
+Edecoder3to8
+Z1 w1756379356
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z4 8Decoder3to8.vhd
+Z5 FDecoder3to8.vhd
+l0
+L4 1
+VddCbVJEXf5F?GP?3=ZDnQ0
+!s100 bD<Xo9PM69UCi0OmWBoGc2
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1756379999
+!i10b 1
+Z8 !s108 1756379999.000000
+Z9 !s90 -reportprogress|300|Decoder3to8.vhd|
+Z10 !s107 Decoder3to8.vhd|
+!i113 1
+Z11 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+Z12 DEx4 work 11 decoder3to8 0 22 ddCbVJEXf5F?GP?3=ZDnQ0
+!i122 3
+l14
+L13 21
+VzU`zGDaB=F`<:`mKnEfZ22
+!s100 V@`h45F^B9ZUUdYY=a3J]3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+Edecoder3to8_tb
+Z13 w1756379915
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 4
+R0
+Z15 8Decoder3to8_tb.vhd
+Z16 FDecoder3to8_tb.vhd
+l0
+L5 1
+VzC]U355lR]_D=aX@dZURS3
+!s100 Xh=;A:=7ffP_g^cF[5D@E2
+R6
+32
+Z17 !s110 1756380007
+!i10b 1
+Z18 !s108 1756380007.000000
+Z19 !s90 -reportprogress|300|Decoder3to8_tb.vhd|
+!s107 Decoder3to8_tb.vhd|
+!i113 1
+R11
+Atest
+R12
+R14
+R2
+R3
+Z20 DEx4 work 14 decoder3to8_tb 0 22 zC]U355lR]_D=aX@dZURS3
+!i122 4
+l13
+Z21 L8 30
+Z22 V@4Sb<YchI7RL[>D;5HRYz2
+Z23 !s100 Z6^mlA^6T43OI>hb<KLaa3
+R6
+32
+R17
+!i10b 1
+R18
+R19
+Z24 !s107 Decoder3to8_tb.vhd|
+!i113 1
+R11

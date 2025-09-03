@@ -1,0 +1,1 @@
+-e "work/\n*.wlf\n.DS_Store\nThumbs.db" 

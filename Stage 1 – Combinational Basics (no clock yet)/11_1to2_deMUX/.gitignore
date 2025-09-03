@@ -1,0 +1,57 @@
+# ============================
+# VHDL / ModelSim / VS Code
+# ============================
+
+# Compiled simulation libraries
+work/
+#vsim.wlf
+transcript
+modelsim.ini
+#*.wlf
+*.mti
+#*.mpf
+*.ini
+
+# Temporary compilation and log files
+*.log
+*.lst
+*.map
+*.rpt
+*.out
+*.bak
+
+# Waveform and saved simulation states
+*.vcd
+*.do
+*.sav
+
+# Build artifacts (if using Quartus or Vivado later)
+db/
+incremental_db/
+*.sof
+*.pof
+*.jic
+*.bit
+*.bin
+*.dcp
+*.jou
+*.str
+*.xml
+
+# ============================
+# VS Code
+# ============================
+#.vscode/
+*.code-workspace
+
+# ============================
+# Windows junk
+# ============================
+Thumbs.db
+Desktop.ini
+
+# ============================
+# Python helpers (if you use them for scripts)
+# ============================
+__pycache__/
+*.pyc
