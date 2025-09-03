@@ -31,13 +31,8 @@ Decimal | Input (A) | Output (Y)   | Segments (a–g)
 Other   | 1010–1111  | 0000000      | a(0) b(0) c(0) d(0) e(0) f(0) g(0)
 
 ## Files
-
-- `.vscode/` – VS Code project settings  
-- `work/` – ModelSim working library (auto-generated)  
-- `sevenSeg.mpf` – ModelSim project file  
 - `sevenSeg.vhd` – main 7-segment driver  
 - `sevenSeg_tb.vhd` – testbench  
-- `vsim.wlf` – ModelSim waveform file (simulation output)  
 
 ## Tools
 - **Editor**: VS Code  
