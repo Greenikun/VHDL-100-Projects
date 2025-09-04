@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +9,86 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/anabi/My Drive/Projects/VHDL/VHDL-100-Projects/Stage 1 – Combinational Basics (no clock yet)/19_Comparator4Bit
+Ecomparator4bit
+Z0 w1756983014
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 5
+Z4 dC:/Users/anabi/My Drive/Projects/VHDL/VHDL-100-Projects/Stage 1 - Combinational Basics (no clock yet)/19_Comparator4Bit
+Z5 8Comparator4Bit.vhd
+Z6 FComparator4Bit.vhd
+l0
+L5 1
+ViZhMzNMJdTCU1B6lK^3M]2
+!s100 OO^]bRo>PcgiokZ2NFNkl0
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1756991530
+!i10b 1
+Z9 !s108 1756991530.000000
+Z10 !s90 -reportprogress|300|Comparator4Bit.vhd|
+Z11 !s107 Comparator4Bit.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Abehaviour
+R1
+R2
+R3
+Z13 DEx4 work 14 comparator4bit 0 22 iZhMzNMJdTCU1B6lK^3M]2
+!i122 5
+l18
+L17 24
+V?I0I[WHWeAclM68^U;jBo1
+!s100 9W<W5AG_Jgg6?A4PF0d<Q3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Ecomparator4bit_tb
+Z14 w1756989682
+R1
+R2
+R3
+!i122 6
+R4
+Z15 8Comparator4Bit_tb.vhd
+Z16 FComparator4Bit_tb.vhd
+l0
+L5 1
+VREA[9:J:gGbI?j32lXa343
+!s100 4GKLbYef];2ZeO:?T1SL63
+R7
+32
+Z17 !s110 1756991535
+!i10b 1
+Z18 !s108 1756991535.000000
+Z19 !s90 -reportprogress|300|Comparator4Bit_tb.vhd|
+!s107 Comparator4Bit_tb.vhd|
+!i113 1
+R12
+Atest
+R13
+R1
+R2
+R3
+DEx4 work 17 comparator4bit_tb 0 22 REA[9:J:gGbI?j32lXa343
+!i122 6
+l30
+L8 73
+V4IU_;eZlhgKH;n]85K1mB0
+!s100 2ThUiF<FenYYQ7j1Gm73h1
+R7
+32
+R17
+!i10b 1
+R18
+R19
+Z20 !s107 Comparator4Bit_tb.vhd|
+!i113 1
+R12

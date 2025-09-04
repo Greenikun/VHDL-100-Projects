@@ -1,5 +1,6 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 ENTITY Comparator4Bit IS
     PORT (
@@ -8,7 +9,7 @@ ENTITY Comparator4Bit IS
 
         A_gt_B : OUT STD_LOGIC;
         A_lt_B : OUT STD_LOGIC;
-        A_eq_B : OUT STD_LOGIC;
+        A_eq_B : OUT STD_LOGIC
 
     );
 END Comparator4Bit;
@@ -30,7 +31,7 @@ BEGIN
             A_gt_B <= '0';
             A_lt_B <= '1';
             A_eq_B <= '0';
-        ELSE A_int = B_int THEN
+        ELSE 
             A_gt_B <= '0';
             A_lt_B <= '0';
             A_eq_B <= '1';
