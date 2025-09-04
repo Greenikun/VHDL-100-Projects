@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Init Library",
+            "type": "shell",
+            "command": "C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlib.exe",
+            "args": ["work"],
+            "options": {
+                "cwd": "${fileDirname}"
+            }
+        },
+        {
+            "label": "Map Library",
+            "type": "shell",
+            "command": "C:/intelFPGA/20.1/modelsim_ase/win32aloem/vmap.exe",
+            "args": ["work", "work"],
+            "options": {
+                "cwd": "${fileDirname}"
+            }
+        },
+        {
+            "label": "Compile VHDL (ModelSim)",
+            "type": "shell",
+            "command": "C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom.exe",
+            "args": [
+                "-2008",
+                "*.vhd"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": [
+                "Init Library",
+                "Map Library"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
