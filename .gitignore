@@ -11,6 +11,8 @@
 *.exe
 *.trn
 modelsim.ini
+/work/
+
 # OS files
 .DS_Store
 Thumbs.db
