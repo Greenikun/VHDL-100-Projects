@@ -26,7 +26,7 @@ Gray code is a binary numeral system where **two successive values differ by onl
 ## Project Description
 
 The `GrayToBinary` converter is fully **combinational**, meaning no clock is needed.  
-It is **parameterizable**—you can choose the number of bits `N` for your application.  
+It is **parameterizable**, you can choose the number of bits `N` for your application.  
 
 **Features:**  
 - Combinational logic  
