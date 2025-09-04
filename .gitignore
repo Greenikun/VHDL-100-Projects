@@ -10,7 +10,7 @@
 *.cf
 *.exe
 *.trn
-
+modelsim.ini
 # OS files
 .DS_Store
 Thumbs.db
