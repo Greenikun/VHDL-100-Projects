@@ -4,8 +4,8 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY Comparator8Bit IS
     PORT (
-        A : IN STD_LOGIC_VECTOR(7 downto0);
-        B : IN STD_LOGIC_VECTOR(7 downto0);
+        A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+        B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 
         A_gt_B : OUT STD_LOGIC;
         A_lt_B : OUT STD_LOGIC;
@@ -14,7 +14,7 @@ ENTITY Comparator8Bit IS
 END Comparator8Bit;
 -----------------------------------------------------------
 ARCHITECTURE Behaviour OF Comparator8Bit IS
-
+BEGIN
     PROCESS (A, B)
         VARIABLE A_int, B_int : INTEGER;
     BEGIN
@@ -33,5 +33,7 @@ ARCHITECTURE Behaviour OF Comparator8Bit IS
             A_gt_B <= '0';
             A_lt_B <= '0';
             A_eq_B <= '1';
-        END PROCESS;
-    END Behaviour;
+        END IF;
+    END PROCESS;
+
+END Behaviour;
