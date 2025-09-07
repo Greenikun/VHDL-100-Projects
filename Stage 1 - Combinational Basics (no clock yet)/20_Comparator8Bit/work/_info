@@ -1,0 +1,94 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/anabi/My Drive/Projects/VHDL/VHDL-100-Projects/Stage 1 - Combinational Basics (no clock yet)/20_Comparator8Bit
+Ecomparator8bit
+Z1 w1757244444
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8Comparator8Bit.vhd
+Z6 FComparator8Bit.vhd
+l0
+L5 1
+Vi<c^N5CSakmG@QE8ACnK_0
+!s100 3;Wg9c7XCBzia8Y==LOnj3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1757244691
+!i10b 1
+Z9 !s108 1757244690.000000
+Z10 !s90 -reportprogress|300|Comparator8Bit.vhd|
+Z11 !s107 Comparator8Bit.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Abehaviour
+R2
+R3
+R4
+Z13 DEx4 work 14 comparator8bit 0 22 i<c^N5CSakmG@QE8ACnK_0
+!i122 0
+l21
+L20 24
+VA<Q7A?gPl;I>MnGBO8e942
+!s100 8`EgWH;]]jQ@oIFS0Ym@f1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Ecomparator8bit_tb
+Z14 w1757244275
+R2
+R3
+R4
+!i122 1
+R0
+Z15 8Comparator8Bit_tb.vhd
+Z16 FComparator8Bit_tb.vhd
+l0
+L5 1
+V_56WQH43SG9LN^=cWglhJ1
+!s100 8g^=8b0BEXckk^Wj6OMVj0
+R7
+32
+Z17 !s110 1757244708
+!i10b 1
+Z18 !s108 1757244708.000000
+Z19 !s90 -reportprogress|300|Comparator8Bit_tb.vhd|
+!s107 Comparator8Bit_tb.vhd|
+!i113 1
+R12
+Atest
+R13
+R2
+R3
+R4
+DEx4 work 17 comparator8bit_tb 0 22 _56WQH43SG9LN^=cWglhJ1
+!i122 1
+l13
+L8 52
+V=M2jMKa9kmQTYcGhVj3b?3
+!s100 _zcKN59QCSb8>oT0312gY2
+R7
+32
+R17
+!i10b 1
+R18
+R19
+Z20 !s107 Comparator8Bit_tb.vhd|
+!i113 1
+R12

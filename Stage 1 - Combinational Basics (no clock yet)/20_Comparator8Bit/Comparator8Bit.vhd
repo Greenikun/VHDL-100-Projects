@@ -12,7 +12,11 @@ ENTITY Comparator8Bit IS
         A_eq_B : OUT STD_LOGIC
     );
 END Comparator8Bit;
+
+
 -----------------------------------------------------------
+
+
 ARCHITECTURE Behaviour OF Comparator8Bit IS
 BEGIN
     PROCESS (A, B)
