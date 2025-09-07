@@ -12,7 +12,7 @@
 *.trn
 modelsim.ini
 **/work/
-
+/work/
 # OS files
 .DS_Store
 Thumbs.db
