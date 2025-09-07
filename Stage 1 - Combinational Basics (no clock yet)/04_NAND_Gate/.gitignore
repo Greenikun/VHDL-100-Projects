@@ -1,0 +1,24 @@
+
+
+# ModelSim
+*.wlf
+*.do
+*.history
+*.tmp
+*.o
+*.vho
+*.cf
+*.exe
+*.trn
+modelsim.ini
+/work/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# other
+Projects List.gdoc
+Prompt.txt
+Task.txt
