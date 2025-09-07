@@ -43,13 +43,13 @@ BEGIN
                     expected_A_eq_B := '1';
                 END IF;
                 ASSERT expected_A_gt_B = A_gt_B
-                REPORT "ERROR: A shall be greated than B but the test shows the opposite"
+                REPORT "Mismatch at A=" & integer'image(i) & ", B=" & integer'image(j) & " : A_gt_B incorrect"
                     SEVERITY ERROR;
                 ASSERT expected_A_lt_B = A_lt_B
-                REPORT "ERROR: A shall be less than B but the test shows the opposite"
+                REPORT "Mismatch at A=" & integer'image(i) & ", B=" & integer'image(j) & " : A_lt_B incorrect"
                     SEVERITY ERROR;
                 ASSERT expected_A_eq_B = A_eq_B
-                REPORT "ERROR: A shall equal B but the test shows the opposite"
+                REPORT "Mismatch at A=" & integer'image(i) & ", B=" & integer'image(j) & " : A_eq_B incorrect"
                     SEVERITY ERROR;
             END LOOP;
         END LOOP;
