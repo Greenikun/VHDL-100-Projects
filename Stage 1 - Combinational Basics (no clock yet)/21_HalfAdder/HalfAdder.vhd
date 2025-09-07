@@ -12,6 +12,9 @@ END HalfAdder;
 -----------------------------------------------
 ARCHITECTURE Behaviour OF HalfAdder IS
 BEGIN
-    S <= A XOR B;
-    C <= A AND B;
+    PROCESS (A, B)
+    BEGIN
+        S <= A XOR B;
+        C <= A AND B;
+    END PROCESS;
 END Behaviour;
