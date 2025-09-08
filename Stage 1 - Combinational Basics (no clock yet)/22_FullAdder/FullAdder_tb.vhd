@@ -10,9 +10,9 @@ END FullAdder_tb;
 --
 --
 ARCHITECTURE Test OF FullAdder_tb IS
-    SIGNAL A : STD_LOGIC := '0';
-    SIGNAL B : STD_LOGIC := '0';
-    SIGNAL Cin : STD_LOGIC := '0';
+    SIGNAL A : STD_LOGIC;
+    SIGNAL B : STD_LOGIC;
+    SIGNAL Cin : STD_LOGIC;
     SIGNAL Sum : STD_LOGIC;
     SIGNAL Cout : STD_LOGIC;
 BEGIN
@@ -30,33 +30,37 @@ BEGIN
         VARIABLE expected_Sum, expected_Cout : STD_LOGIC;
         VARIABLE curr_A, curr_B, curr_Cin : STD_LOGIC;
     BEGIN
-        FOR i IN 0 TO 7 LOOP
-            -- store current inputs in variables
-            curr_A := vec(2);
-            curr_B := vec(1);
-            curr_Cin := vec(0);
+       FOR i IN 0 TO 7 LOOP
+    -- Convert loop index to 3-bit vector
+    vec := STD_LOGIC_VECTOR(to_unsigned(i, 3));
 
-            A <= curr_A;
-            B <= curr_B;
-            Cin <= curr_Cin;
+    -- Assign current inputs
+    curr_A := vec(2);
+    curr_B := vec(1);
+    curr_Cin := vec(0);
 
-            WAIT FOR 1 ns;
+    -- Drive signals
+    A <= curr_A;
+    B <= curr_B;
+    Cin <= curr_Cin;
 
-            -- expected outputs
-            expected_Sum := curr_A XOR curr_B XOR curr_Cin;
-            expected_Cout := (curr_A AND curr_B) OR (curr_Cin AND (curr_A XOR curr_B));
+    WAIT FOR 1 ns;
 
-            -- assertions
-            ASSERT Sum = expected_Sum
-            REPORT "Error in Sum at iteration " & INTEGER'image(i)
-                SEVERITY ERROR;
+    -- Expected outputs
+    expected_Sum  := curr_A xor curr_B xor curr_Cin;
+    expected_Cout := (curr_A and curr_B) or (curr_Cin and (curr_A xor curr_B));
 
-            ASSERT Cout = expected_Cout
-            REPORT "Error in Cout at iteration " & INTEGER'image(i)
-                SEVERITY ERROR;
+    -- Assertions
+    ASSERT Sum = expected_Sum
+        REPORT "Error in Sum at iteration " & integer'image(i)
+        SEVERITY ERROR;
 
-            REPORT "Test " & INTEGER'image(i) & " passed!" SEVERITY NOTE;
-        END LOOP;
+    ASSERT Cout = expected_Cout
+        REPORT "Error in Cout at iteration " & integer'image(i)
+        SEVERITY ERROR;
+
+    REPORT "Test " & integer'image(i) & " passed!" SEVERITY NOTE;
+END LOOP;
 
         WAIT;
     END PROCESS stim_proc;
