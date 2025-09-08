@@ -1,6 +1,6 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
-
+USE IEEE.numeric_std.ALL;
 ENTITY FullAdder_tb IS
 END FullAdder_tb;
 --
@@ -32,8 +32,12 @@ BEGIN
             A <= vec(2);
             B <= vec(1);
             Cin <= vec(0);
+            -- or:
+            -- A <= std_logic(to_unsigned(i,3)(2));
+            -- B <= std_logic(to_unsigned(i,3)(1));
+            -- Cin <= std_logic(to_unsigned(i,3)(0));
             WAIT FOR 1 ns;
         END LOOP;
         WAIT;
-    END stim_proc PROCESS;
+    END PROCESS stim_proc;
 END Test;
