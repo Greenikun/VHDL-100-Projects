@@ -37,7 +37,7 @@ This repository serves as a comprehensive resource for anyone looking to learn o
 - [x] 18. [Gray code to binary converter](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/18_Gray_Code_to_Binary_Converter/).
 - [x] 19. [4-bit comparator](https://github.com/TheChipMaker/VHDL-100-Projects/tree/main/Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/19_Comparator4Bit).
 - [x] 20. [8-bit comparator](https://github.com/TheChipMaker/VHDL-100-Projects/tree/main/Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/20_Comparator8Bit).
-- [ ] 21. Half adder  
+- [x] 21. [Half adder](https://github.com/TheChipMaker/VHDL-100-Projects/tree/main/Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/21_HalfAdder).  
 - [ ] 22. Full adder  
 - [ ] 23. 4-bit ripple carry adder  
 - [ ] 24. 4-bit subtractor  
