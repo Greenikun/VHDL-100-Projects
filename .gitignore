@@ -17,6 +17,8 @@ modelsim.ini
 .DS_Store
 Thumbs.db
 desktop.ini
+**/*.bak
+*.bak
 
 # other
 Projects List.gdoc
