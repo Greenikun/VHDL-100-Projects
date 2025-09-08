@@ -38,7 +38,7 @@ This repository serves as a comprehensive resource for anyone looking to learn o
 - [x] 19. [4-bit comparator](https://github.com/TheChipMaker/VHDL-100-Projects/tree/main/Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/19_Comparator4Bit).
 - [x] 20. [8-bit comparator](https://github.com/TheChipMaker/VHDL-100-Projects/tree/main/Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/20_Comparator8Bit).
 - [x] 21. [Half adder](https://github.com/TheChipMaker/VHDL-100-Projects/tree/main/Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/21_HalfAdder).  
-- [ ] 22. Full adder  
+- [x] 22. [Full adder](https://github.com/TheChipMaker/VHDL-100-Projects/tree/main/Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/22_FullAdder).
 - [ ] 23. 4-bit ripple carry adder  
 - [ ] 24. 4-bit subtractor  
 - [ ] 25. 4-bit adder-subtractor (selectable with a control signal)  
