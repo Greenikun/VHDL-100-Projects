@@ -12,19 +12,13 @@ A **VHDL project** implementing a **Full Adder**, part of the **VHDL 100 Project
 The full adder takes three **single-bit inputs** and produces a **Sum** and **Carry-out** output. The testbench is self-checking, verifying all 8 possible input combinations automatically.
 
 ## Table of Contents
-- [Full Adder VHDL Project](#full-adder-vhdl-project)
-  - [Table of Contents](#table-of-contents)
-  - [Project Description](#project-description)
-  - [Entity Overview](#entity-overview)
-  - [Architecture](#architecture)
-  - [Testbench](#testbench)
-  - [Simulation](#simulation)
-- [1. Create work library and map](#1-create-work-library-and-map)
-- [2. Compile the design and testbench](#2-compile-the-design-and-testbench)
-- [3. Load the testbench](#3-load-the-testbench)
-- [4. Add all signals to waveform viewer (optional)](#4-add-all-signals-to-waveform-viewer-optional)
-- [5. Run the simulation completely](#5-run-the-simulation-completely)
-  - [Test Result](#test-result)
+
+- [Project Description](#project-description)
+- [Entity Overview](#entity-overview)
+- [Architecture](#architecture)
+- [Testbench](#testbench)
+- [Simulation](#simulation)
+
 
 ## Project Description
 
