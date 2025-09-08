@@ -1,6 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
+
 ENTITY FullAdder_tb IS
 END FullAdder_tb;
 --
@@ -26,18 +27,37 @@ BEGIN
         );
     stim_proc : PROCESS
         VARIABLE vec : STD_LOGIC_VECTOR(2 DOWNTO 0);
+        VARIABLE expected_Sum, expected_Cout : STD_LOGIC;
+        VARIABLE curr_A, curr_B, curr_Cin : STD_LOGIC;
     BEGIN
         FOR i IN 0 TO 7 LOOP
-            vec := STD_LOGIC_VECTOR(to_unsigned(i, 3));
-            A <= vec(2);
-            B <= vec(1);
-            Cin <= vec(0);
-            -- or:
-            -- A <= std_logic(to_unsigned(i,3)(2));
-            -- B <= std_logic(to_unsigned(i,3)(1));
-            -- Cin <= std_logic(to_unsigned(i,3)(0));
+            -- store current inputs in variables
+            curr_A := vec(2);
+            curr_B := vec(1);
+            curr_Cin := vec(0);
+
+            A <= curr_A;
+            B <= curr_B;
+            Cin <= curr_Cin;
+
             WAIT FOR 1 ns;
+
+            -- expected outputs
+            expected_Sum := curr_A XOR curr_B XOR curr_Cin;
+            expected_Cout := (curr_A AND curr_B) OR (curr_Cin AND (curr_A XOR curr_B));
+
+            -- assertions
+            ASSERT Sum = expected_Sum
+            REPORT "Error in Sum at iteration " & INTEGER'image(i)
+                SEVERITY ERROR;
+
+            ASSERT Cout = expected_Cout
+            REPORT "Error in Cout at iteration " & INTEGER'image(i)
+                SEVERITY ERROR;
+
+            REPORT "Test " & INTEGER'image(i) & " passed!" SEVERITY NOTE;
         END LOOP;
+
         WAIT;
     END PROCESS stim_proc;
 END Test;
