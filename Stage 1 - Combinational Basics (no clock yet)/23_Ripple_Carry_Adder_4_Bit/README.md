@@ -14,13 +14,13 @@ The RCA takes two **4-bit inputs** (`A` and `B`) and a **carry-in** (`Cin`), pro
 ## Table of Contents
 
 - [4-Bit Ripple Carry Adder (RCA) VHDL Project](#4-bit-ripple-carry-adder-rca-vhdl-project)
-  - [Table of Contents](#table-of-contents)
-  - [Project Description](#project-description)
-  - [Entity Overview](#entity-overview)
-  - [Architecture](#architecture)
-  - [Testbench](#testbench)
-  - [Simulation](#simulation)
-  - [Test Results](#test-results)
+- [Table of Contents](#table-of-contents)
+- [Project Description](#project-description)
+- [Entity Overview](#entity-overview)
+- [Architecture](#architecture)
+- [Testbench](#testbench)
+- [Simulation](#simulation)
+- [Test Results](#test-results)
 
 ## Project Description
 
