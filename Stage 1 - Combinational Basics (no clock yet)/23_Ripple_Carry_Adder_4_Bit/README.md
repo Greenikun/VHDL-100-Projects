@@ -26,16 +26,16 @@ The RCA takes two **4-bit inputs** (`A` and `B`) and a **carry-in** (`Cin`), pro
 
 This project implements a **4-bit combinational adder**:
 
-- Inputs: `A`, `B` (4-bit vectors), `Cin` (single-bit)  
-- Outputs: `S` (4-bit sum), `Cout` (carry-out)
+- Inputs: `A`, `B` (4-bit vectors), `Cin` (single-bit).
+- Outputs: `S` (4-bit sum), `Cout` (carry-out).
 
 The adder is composed of **four 1-bit full adders** connected in a ripple-carry configuration.
 
 **Features:**
 
-- Pure combinational logic, no clock required  
-- Synthesizable and modular design  
-- Exhaustive self-checking testbench for all input combinations  
+- Pure combinational logic, no clock required.
+- Synthesizable and modular design.
+- Exhaustive self-checking testbench for all input combinations.
 
 ## Entity Overview
 
@@ -80,34 +80,38 @@ END Behaviour;
 
 The **self-checking testbench** verifies all combinations of `A`, `B`, and `Cin` automatically:
 ```vhdl
-stim_proc : PROCESS
-    VARIABLE expected_S    : INTEGER;
-    VARIABLE expected_Cout : STD_LOGIC;
-BEGIN
-    FOR c IN 0 TO 1 LOOP
-        Cin <= '0' WHEN c = 0 ELSE '1';
-        FOR i IN 0 TO 15 LOOP
-            A <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
-            FOR j IN 0 TO 15 LOOP
-                B <= STD_LOGIC_VECTOR(to_unsigned(j, 4));
-                WAIT FOR 1 ns;
+    stim_proc : PROCESS
+        VARIABLE expected_S : INTEGER;       -- Expected 4-bit sum
+        VARIABLE expected_Cout : STD_LOGIC;  -- Expected carry-out
+    BEGIN
+        -- Loop over Cin = 0 and Cin = 1
+        FOR c IN 0 TO 1 LOOP
+            Cin <= '0' WHEN c = 0 ELSE '1';
 
-                -- Self-check
-                expected_S := (i + j + (0 WHEN Cin = '0' ELSE 1)) MOD 16;
-                expected_Cout := '1' WHEN (i + j + (0 WHEN Cin = '0' ELSE 1)) > 15 ELSE '0';
+            -- Loop over all 4-bit A and B combinations
+            FOR i IN 0 TO 15 LOOP
+                A <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
+                FOR j IN 0 TO 15 LOOP
+                    B <= STD_LOGIC_VECTOR(to_unsigned(j, 4));
+                    WAIT FOR 1 ns;
 
-                ASSERT (S = STD_LOGIC_VECTOR(to_unsigned(expected_S, 4))) AND (Cout = expected_Cout)
+                    -- Self-check: compute expected sum and carry
+                    expected_S := (i + j + (0 WHEN Cin = '0' ELSE 1)) MOD 16;
+                    expected_Cout := '1' WHEN (i + j + (0 WHEN Cin = '0' ELSE 1)) > 15 ELSE '0';
+
+                    -- Compare DUT output with expected values
+                    ASSERT (S = STD_LOGIC_VECTOR(to_unsigned(expected_S, 4))) AND (Cout = expected_Cout)
                     REPORT "Test failed: A=" & INTEGER'image(i) &
                            " B=" & INTEGER'image(j) &
                            " Cin=" & STD_LOGIC'image(Cin)
                     SEVERITY error;
+                END LOOP;
             END LOOP;
         END LOOP;
-    END LOOP;
 
-    REPORT "All tests passed!" SEVERITY note;
-    WAIT;
-END PROCESS;
+        REPORT "All tests passed!" SEVERITY note;  -- All combinations passed
+        WAIT;
+    END PROCESS;
 ```
 - **Self-checking** ensures any mismatch between the expected and DUT outputs triggers an assertion.
 
