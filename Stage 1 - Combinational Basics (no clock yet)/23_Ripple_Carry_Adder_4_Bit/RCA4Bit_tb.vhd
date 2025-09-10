@@ -1,3 +1,9 @@
+-- The whole code needs to be revised
+
+
+
+
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
@@ -28,12 +34,15 @@ BEGIN
     BEGIN
         -- Loop over Cin = 0 and Cin = 1
         FOR c IN 0 TO 1 LOOP
-            -- Sequential assignment for Cin
+            -- Assign Cin signal
             IF c = 0 THEN
                 Cin <= '0';
             ELSE
                 Cin <= '1';
             END IF;
+
+            -- Wait 1 ns to allow Cin to propagate through RCA
+            WAIT FOR 1 ns;
 
             -- Loop over all 4-bit A and B combinations
             FOR i IN 0 TO 15 LOOP
@@ -42,21 +51,12 @@ BEGIN
                     B <= STD_LOGIC_VECTOR(to_unsigned(j, 4));
                     WAIT FOR 1 ns;
 
-                    -- Compute expected sum and carry
-                    IF Cin = '0' THEN
-                        expected_S := (i + j + 0) MOD 16;
-                        IF (i + j + 0) > 15 THEN
-                            expected_Cout := '1';
-                        ELSE
-                            expected_Cout := '0';
-                        END IF;
+                    -- Compute expected sum and carry using loop variable c
+                    expected_S := (i + j + c) MOD 16;
+                    IF (i + j + c) > 15 THEN
+                        expected_Cout := '1';
                     ELSE
-                        expected_S := (i + j + 1) MOD 16;
-                        IF (i + j + 1) > 15 THEN
-                            expected_Cout := '1';
-                        ELSE
-                            expected_Cout := '0';
-                        END IF;
+                        expected_Cout := '0';
                     END IF;
 
                     -- Compare DUT output with expected values
@@ -70,7 +70,9 @@ BEGIN
             END LOOP;
         END LOOP;
 
+        -- All tests passed
         REPORT "All tests passed!" SEVERITY note;
         WAIT;
     END PROCESS;
 END Test;
+
