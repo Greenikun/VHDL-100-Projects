@@ -6,6 +6,7 @@
 ![Hardware](https://img.shields.io/badge/Technology-Hardware-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![Self-Tested](https://img.shields.io/badge/Self%20Check%20Testbenches-Yes-red)
 
 Welcome to the **VHDL 100 Projects** repository! This collection presents a structured progression of **VHDL projects**, ranging from basic logic gates to a fully functional **mini CPU and SoC**. Each project is **fully synthesizable** and tested using **ModelSim simulations**, providing both the VHDL source code and accompanying test benches.  
 
