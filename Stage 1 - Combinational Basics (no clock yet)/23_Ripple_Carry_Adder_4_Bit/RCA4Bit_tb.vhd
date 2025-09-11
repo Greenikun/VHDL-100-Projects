@@ -26,22 +26,17 @@ BEGIN
         VARIABLE expected_S : INTEGER; -- Expected 4-bit sum
         VARIABLE expected_Cout : STD_LOGIC; -- Expected carry-out
     BEGIN
-        Cin <= '0';
-        FOR i IN 0 TO 15 LOOP
-            A <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
-            FOR j IN 0 TO 15 LOOP
-                B <= STD_LOGIC_VECTOR(to_unsigned(j, 4));
-                WAIT FOR 1 ns;
+        -- Loop through all input combinations
+        FOR cin_val IN 0 TO 1 LOOP
+            Cin <= STD_LOGIC'val(cin_val);
+            FOR i IN 0 TO 15 LOOP
+                A <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
+                FOR j IN 0 TO 15 LOOP
+                    B <= STD_LOGIC_VECTOR(to_unsigned(j, 4));
+                    WAIT FOR 1 ns;
+                END LOOP;
             END LOOP;
         END LOOP;
-        Cin <= '1';
-        FOR i IN 0 TO 15 LOOP
-            A <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
-            FOR j IN 0 TO 15 LOOP
-                B <= STD_LOGIC_VECTOR(to_unsigned(j, 4));
-                WAIT FOR 1 ns;
-            END LOOP;
-        END LOOP;
-        WAIT;
+        WAIT; -- stop simulation
     END PROCESS;
 END Test;
