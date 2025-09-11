@@ -32,7 +32,7 @@ This repository serves as a comprehensive resource for anyone looking to learn o
 - [x] 12. [1-to-4 demultiplexer](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/12_1to4_deMUX/).
 - [x] 13. [2-to-4 decoder](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/13_Decoder2to4/).
 - [x] 14. [3-to-8 decoder](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/14_Decoder3to8/).
-- [x] 15. [Priority encoder (4-to-2)](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/15_Priority_Encoder/).
+- [x] 15. [Priority encoder (8-to-3)](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/15_Priority_Encoder/).
 - [x] 16. [7-segment display driver (0–9)](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/16_SevenSeg_Driver/).
 - [x] 17. [Binary to Gray code converter](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/17_Binary_to_Gray_Code_Converter/).
 - [x] 18. [Gray code to binary converter](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/18_Gray_Code_to_Binary_Converter/).
