@@ -34,18 +34,19 @@ USE IEEE.std_logic_1164.ALL;
 
 ENTITY sevenSeg IS
     PORT (
-        A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-        Y : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+        A : IN  STD_LOGIC_VECTOR(3 DOWNTO 0); -- 4-bit input representing hexadecimal digit (0–15)
+        Y : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)  -- 7-segment output (a–g)
     );
 END sevenSeg;
+
 ----------------------------------------------
 ARCHITECTURE Behaviour OF sevenSeg IS
 BEGIN
 
     PROCESS (A)
     BEGIN
+        -- Map input digit to 7-segment display encoding
         CASE A IS
-
             WHEN "0000" => Y <= "1111110"; -- 0
             WHEN "0001" => Y <= "0110000"; -- 1
             WHEN "0010" => Y <= "1101101"; -- 2
@@ -56,8 +57,7 @@ BEGIN
             WHEN "0111" => Y <= "1110000"; -- 7
             WHEN "1000" => Y <= "1111111"; -- 8
             WHEN "1001" => Y <= "1111011"; -- 9
-            WHEN OTHERS => Y <= "0000000"; -- other inputs
-
+            WHEN OTHERS => Y <= "0000000"; -- invalid input, turn off display
         END CASE;
 
     END PROCESS;

@@ -5,8 +5,9 @@ ENTITY MUX2to1_tb IS
 END MUX2to1_tb;
 
 ARCHITECTURE test OF MUX2to1_tb IS
-    SIGNAL A, B, S, Y : STD_LOGIC;
+    SIGNAL A, B, S, Y : STD_LOGIC;  -- Signals to drive DUT and capture output
 BEGIN
+    -- Instantiate the Device Under Test (DUT)
     uut : ENTITY work.MUX2to1
         PORT MAP(
             A => A,
@@ -14,58 +15,36 @@ BEGIN
             S => S,
             Y => Y
         );
-    -- Stimulus process
+
+    -- Stimulus process to test all input combinations
     stimulus_proc : PROCESS
     BEGIN
-        -- Test Case 1
-        A <= '0';
-        B <= '0';
-        S <= '0';
+        -- Select = 0 test cases
+        A <= '0'; B <= '0'; S <= '0';  -- Expect Y = 0
         WAIT FOR 2 ns;
 
-        -- Test Case 2
-        A <= '0';
-        B <= '1';
-        S <= '0';
+        A <= '0'; B <= '1'; S <= '0';  -- Expect Y = 0
         WAIT FOR 2 ns;
 
-        -- Test Case 3
-        A <= '1';
-        B <= '0';
-        S <= '0';
+        A <= '1'; B <= '0'; S <= '0';  -- Expect Y = 1
         WAIT FOR 2 ns;
 
-        -- Test Case 4
-        A <= '1';
-        B <= '1';
-        S <= '0';
+        A <= '1'; B <= '1'; S <= '0';  -- Expect Y = 1
         WAIT FOR 2 ns;
 
-        -- Test Case 5
-        A <= '0';
-        B <= '0';
-        S <= '1';
+        -- Select = 1 test cases
+        A <= '0'; B <= '0'; S <= '1';  -- Expect Y = 0
         WAIT FOR 2 ns;
 
-        -- Test Case 6
-        A <= '0';
-        B <= '1';
-        S <= '1';
+        A <= '0'; B <= '1'; S <= '1';  -- Expect Y = 1
         WAIT FOR 2 ns;
 
-        -- Test Case 7
-        A <= '1';
-        B <= '0';
-        S <= '1';
+        A <= '1'; B <= '0'; S <= '1';  -- Expect Y = 0
         WAIT FOR 2 ns;
 
-        -- Test Case 8
-        A <= '1';
-        B <= '1';
-        S <= '1';
+        A <= '1'; B <= '1'; S <= '1';  -- Expect Y = 1
         WAIT FOR 2 ns;
 
-        WAIT;
-
+        WAIT; -- Stop simulation here
     END PROCESS;
 END test;

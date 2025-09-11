@@ -5,8 +5,9 @@ entity XNOR_GATE_tb is
 end XNOR_GATE_tb;
 
 architecture Behavioral of XNOR_GATE_tb is
-    signal A, B, Y : std_logic;
+    signal A, B, Y : std_logic;  -- Signals to drive DUT and capture output
 begin
+    -- Instantiate the Device Under Test (DUT)
     uut: entity work.XNOR_GATE
         port map (
             A => A,
@@ -14,16 +15,21 @@ begin
             Y => Y
         );
 
+    -- Stimulus process to test all input combinations
     stim_proc: process
     begin
-        A <= '0'; B <= '0';
+        A <= '0'; B <= '0';  -- Test case 0 XNOR 0
         wait for 10 ns;
-        A <= '0'; B <= '1';
+
+        A <= '0'; B <= '1';  -- Test case 0 XNOR 1
         wait for 10 ns;
-        A <= '1'; B <= '0';
+
+        A <= '1'; B <= '0';  -- Test case 1 XNOR 0
         wait for 10 ns;
-        A <= '1'; B <= '1';
+
+        A <= '1'; B <= '1';  -- Test case 1 XNOR 1
         wait for 10 ns;
-        wait; -- stop simulation here
+
+        wait; -- Stop simulation here
     end process;
 end Behavioral;

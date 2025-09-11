@@ -7,10 +7,10 @@ END PriorityEncoder8to3_tb;
 
 -------------------------------------------------------
 ARCHITECTURE test OF PriorityEncoder8to3_tb IS
-    -- signals to connect to the DUT
-    SIGNAL A : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
-    SIGNAL Y : STD_LOGIC_VECTOR(2 DOWNTO 0);
-    SIGNAL V : STD_LOGIC;
+    -- Signals to connect to DUT
+    SIGNAL A : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  -- input
+    SIGNAL Y : STD_LOGIC_VECTOR(2 DOWNTO 0);                     -- output from DUT
+    SIGNAL V : STD_LOGIC;                                        -- valid flag from DUT
 BEGIN
     -- Instantiate the DUT
     uut : ENTITY work.PriorityEncoder8to3
@@ -24,18 +24,21 @@ BEGIN
     stim_proc : PROCESS
     BEGIN
 
+        -- Test each single high input for priority detection
         FOR i IN 7 DOWNTO 0 LOOP
-            A <= (OTHERS => '0');
-            A(i) <= '1';
+            A <= (OTHERS => '0');  -- clear all inputs
+            A(i) <= '1';           -- set only current input high
             WAIT FOR 1 ns;
         END LOOP;
-        -- Test multiple-high inputs (priority check)
-        A <= "10101010";
-        WAIT FOR 10 ns; -- highest = 7
-        A <= "01010101";
-        WAIT FOR 10 ns; -- highest = 6
-        A <= "00000000";
-        WAIT FOR 10 ns; -- no input active
-        WAIT;
+
+        -- Test multiple-high inputs (verify priority of highest index)
+        A <= "10101010";  -- highest active input should be 7
+        WAIT FOR 10 ns;
+        A <= "01010101";  -- highest active input should be 6
+        WAIT FOR 10 ns;
+        A <= "00000000";  -- no inputs active, V should be 0
+        WAIT FOR 10 ns;
+
+        WAIT;  -- stop simulation
     END PROCESS;
 END test;

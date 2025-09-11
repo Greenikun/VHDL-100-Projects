@@ -4,64 +4,56 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY FullAdder_tb IS
 END FullAdder_tb;
---
---
+
 ----------------------------------------------------
---
---
 ARCHITECTURE Test OF FullAdder_tb IS
-    SIGNAL A : STD_LOGIC;
-    SIGNAL B : STD_LOGIC;
-    SIGNAL Cin : STD_LOGIC;
-    SIGNAL Sum : STD_LOGIC;
-    SIGNAL Cout : STD_LOGIC;
+    SIGNAL A, B, Cin  : STD_LOGIC;
+    SIGNAL Sum, Cout  : STD_LOGIC;
 BEGIN
 
+    -- Instantiate the DUT
     DuT : ENTITY work.FullAdder
         PORT MAP(
-            A => A,
-            B => B,
-            Cin => Cin,
-            Sum => Sum,
+            A    => A,
+            B    => B,
+            Cin  => Cin,
+            Sum  => Sum,
             Cout => Cout
         );
+
+    -- Stimulus and self-check process
     stim_proc : PROCESS
         VARIABLE vec : STD_LOGIC_VECTOR(2 DOWNTO 0);
         VARIABLE expected_Sum, expected_Cout : STD_LOGIC;
-        VARIABLE curr_A, curr_B, curr_Cin : STD_LOGIC;
     BEGIN
-       FOR i IN 0 TO 7 LOOP
-    -- Convert loop index to 3-bit vector
-    vec := STD_LOGIC_VECTOR(to_unsigned(i, 3));
+        -- Loop through all 8 input combinations (A,B,Cin)
+        FOR i IN 0 TO 7 LOOP
+            vec := STD_LOGIC_VECTOR(to_unsigned(i, 3));
 
-    -- Assign current inputs
-    curr_A := vec(2);
-    curr_B := vec(1);
-    curr_Cin := vec(0);
+            -- Drive DUT inputs
+            A   <= vec(2);
+            B   <= vec(1);
+            Cin <= vec(0);
 
-    -- Drive signals
-    A <= curr_A;
-    B <= curr_B;
-    Cin <= curr_Cin;
+            WAIT FOR 1 ns;  -- allow DUT outputs to update
 
-    WAIT FOR 1 ns;
+            -- Compute expected outputs
+            expected_Sum  := vec(2) XOR vec(1) XOR vec(0);
+            expected_Cout := (vec(2) AND vec(1)) OR (vec(0) AND (vec(2) XOR vec(1)));
 
-    -- Expected outputs
-    expected_Sum  := curr_A xor curr_B xor curr_Cin;
-    expected_Cout := (curr_A and curr_B) or (curr_Cin and (curr_A xor curr_B));
+            -- Assertions to check correctness
+            ASSERT Sum = expected_Sum
+                REPORT "Error in Sum at input " & STD_LOGIC'IMAGE(vec(2)) & STD_LOGIC'IMAGE(vec(1)) & STD_LOGIC'IMAGE(vec(0))
+                SEVERITY ERROR;
 
-    -- Assertions
-    ASSERT Sum = expected_Sum
-        REPORT "Error in Sum at iteration " & integer'image(i)
-        SEVERITY ERROR;
+            ASSERT Cout = expected_Cout
+                REPORT "Error in Cout at input " & STD_LOGIC'IMAGE(vec(2)) & STD_LOGIC'IMAGE(vec(1)) & STD_LOGIC'IMAGE(vec(0))
+                SEVERITY ERROR;
 
-    ASSERT Cout = expected_Cout
-        REPORT "Error in Cout at iteration " & integer'image(i)
-        SEVERITY ERROR;
+            REPORT "Test " & integer'image(i) & " passed!" SEVERITY NOTE;
+        END LOOP;
 
-    REPORT "Test " & integer'image(i) & " passed!" SEVERITY NOTE;
-END LOOP;
-
-        WAIT;
+        WAIT; -- stop simulation
     END PROCESS stim_proc;
+
 END Test;

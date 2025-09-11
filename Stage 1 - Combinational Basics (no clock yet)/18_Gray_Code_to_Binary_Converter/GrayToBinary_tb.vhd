@@ -8,9 +8,9 @@ END GrayToBinary_tb;
 -----------------------------------------------------------
 
 ARCHITECTURE Test OF GrayToBinary_tb IS
-    CONSTANT N : INTEGER := 4;
-    SIGNAL G : STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-    SIGNAL B : STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+    CONSTANT N : INTEGER := 4; -- width of input/output
+    SIGNAL G : STD_LOGIC_VECTOR(N-1 DOWNTO 0); -- Gray input to DUT
+    SIGNAL B : STD_LOGIC_VECTOR(N-1 DOWNTO 0); -- Binary output from DUT
 BEGIN
     -- Instantiate DUT
     DUT: ENTITY work.GrayToBinary
@@ -22,21 +22,22 @@ BEGIN
 
     -- Stimulus + self-check process
     stim_proc: PROCESS
+        -- Variables to compute expected binary output
         VARIABLE B_expected_var : STD_LOGIC_VECTOR(N-1 DOWNTO 0);
         VARIABLE i_var : INTEGER;
     BEGIN
+        -- Loop through all possible Gray code inputs
         FOR i_var IN 0 TO 2**N - 1 LOOP
-            -- Apply Gray code input
-            G <= STD_LOGIC_VECTOR(to_unsigned(i_var, N));
-            WAIT FOR 1 ns;  -- allow combinational DUT to update
+            G <= STD_LOGIC_VECTOR(to_unsigned(i_var, N)); -- Apply Gray input
+            WAIT FOR 1 ns;  -- wait for combinational logic to settle
 
-            -- Compute expected binary value using a variable
-            B_expected_var(N-1) := G(N-1);
+            -- Compute expected binary output
+            B_expected_var(N-1) := G(N-1); -- MSB
             FOR j IN N-2 DOWNTO 0 LOOP
                 B_expected_var(j) := B_expected_var(j+1) XOR G(j);
             END LOOP;
 
-            -- Assert DUT output matches expected
+            -- Compare DUT output with expected
             ASSERT (B = B_expected_var)
                 REPORT "Mismatch! Gray=" & INTEGER'IMAGE(to_integer(unsigned(G))) &
                        " Expected Binary=" & INTEGER'IMAGE(to_integer(unsigned(B_expected_var))) &
@@ -44,9 +45,9 @@ BEGIN
                 SEVERITY ERROR;
         END LOOP;
 
-        -- Success message
+        -- Report success
         REPORT "All test cases PASSED." SEVERITY NOTE;
-        WAIT;  -- stop simulation
+        WAIT; -- stop simulation
     END PROCESS;
 
 END Test;
