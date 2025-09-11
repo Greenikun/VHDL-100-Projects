@@ -26,7 +26,7 @@ BEGIN
         VARIABLE expected_S : INTEGER; -- Expected 4-bit sum
         VARIABLE expected_Cout : STD_LOGIC; -- Expected carry-out
     BEGIN
-        Cin < '0';
+        Cin <= '0';
         FOR i IN 0 TO 15 LOOP
             A <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
             FOR j IN 0 TO 15 LOOP
@@ -34,7 +34,7 @@ BEGIN
                 WAIT FOR 1 ns;
             END LOOP;
         END LOOP;
-        Cin < '1';
+        Cin <= '1';
         FOR i IN 0 TO 15 LOOP
             A <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
             FOR j IN 0 TO 15 LOOP
