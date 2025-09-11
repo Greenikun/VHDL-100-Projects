@@ -9,20 +9,20 @@
 
 A **VHDL project** implementing a **4-bit Ripple Carry Adder (RCA)**. The project includes a **self-checking testbench** that verifies all possible input combinations automatically.
 
----
+
 
 ## Table of Contents
 
 - [4-Bit Ripple Carry Adder (RCA) VHDL Project](#4-bit-ripple-carry-adder-rca-vhdl-project)
-  - [Table of Contents](#table-of-contents)
-  - [Project Description](#project-description)
-  - [Entity Overview](#entity-overview)
-  - [Architecture](#architecture)
-  - [Testbench](#testbench)
-  - [Simulation](#simulation)
-  - [Test Results](#test-results)
+- [Table of Contents](#table-of-contents)
+- [Project Description](#project-description)
+- [Entity Overview](#entity-overview)
+- [Architecture](#architecture)
+- [Testbench](#testbench)
+- [Simulation](#simulation)
+- [Test Results](#test-results)
 
----
+
 
 ## Project Description
 
@@ -38,7 +38,7 @@ The adder is implemented using **pure combinational logic** in a ripple-carry co
 - Synthesizable and modular design.
 - Exhaustive self-checking testbench covering all input combinations.
 
----
+
 
 ## Entity Overview
 
