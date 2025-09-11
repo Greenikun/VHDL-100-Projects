@@ -17,15 +17,15 @@ This repository serves as a comprehensive resource for anyone looking to learn o
 ### Stage 1 – Combinational Basics (no clock yet)  
 *Focus: Boolean logic, concurrent assignments, and basic combinational structures.*
 
-- [x] 1. [AND gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/01_AND_GATE/).
-- [x] 2. [OR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/02_OR_GATE/).
-- [x] 3. [NOT gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/03_NOT_Gate/).
-- [x] 4. [NAND gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/04_NAND_Gate/).
-- [x] 5. [NOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/05_NOR_GATE/).
-- [x] 6. [XOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/06_XOR_GATE/).
-- [x] 7. [XNOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/07_XNOR_GATE/).
-- [x] 8. [2-input multiplexer (2:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/08_2to1_MUX/).
-- [x] 9. [4-input multiplexer (4:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/09_4to1_MUX/).
+- [x] 01. [AND gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/01_AND_GATE/).
+- [x] 02. [OR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/02_OR_GATE/).
+- [x] 03. [NOT gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/03_NOT_Gate/).
+- [x] 04. [NAND gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/04_NAND_Gate/).
+- [x] 05. [NOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/05_NOR_GATE/).
+- [x] 06. [XOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/06_XOR_GATE/).
+- [x] 07. [XNOR gate](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/07_XNOR_GATE/).
+- [x] 08. [2-input multiplexer (2:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/08_2to1_MUX/).
+- [x] 09. [4-input multiplexer (4:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/09_4to1_MUX/).
 - [x] 10. [8-input multiplexer (8:1 MUX)](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/10_8to1_MUX/).
 - [x] 11. [1-to-2 demultiplexer](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/11_1to2_deMUX/).
 - [x] 12. [1-to-4 demultiplexer](Stage%201%20%E2%80%93%20Combinational%20Basics%20(no%20clock%20yet)/12_1to4_deMUX/).
