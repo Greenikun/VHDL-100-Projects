@@ -58,28 +58,40 @@ END Adder_Subtractor_4Bit;
 | S      | OUT       | 4-bit sum or difference         |
 | CB_out | OUT       | Carry-out (addition) / Borrow-out (subtraction) |
 
+
 ## Architecture
 
-- 4-bit adder-subtractor uses **1-bit full adders connected in series**.
-- Carry/borrow out of each stage propagates to the next.
-- Subtraction is implemented using **two's complement**:
+- 4-bit adder-subtractor uses **1-bit full adders** connected in series.
+- **Carry/Borrow** out of each stage propagates to the next.
+- **Subtraction** is implemented using two's complement:
 
-```vhdl
--- Modified B for subtraction
-B_mod = B XOR Sub
+**Modified B:**
 
--- Initial carry-in
+$$
+B_{mod} = B \oplus Sub
+$$
+
+**Initial carry-in:**
+
+$$
 Cin = Sub
+$$
 
--- Sum/Difference
-S = A + B_mod + Sub
+**Sum/Difference:**
 
--- Carry/Borrow-out
--- Addition: CB_out = 1 if 4-bit sum overflow occurs
--- Subtraction: CB_out = 1 if no borrow, 0 if borrow occurs (matches MSB inversion)
-```
+$$
+S = A + B_{mod} + Sub
+$$
 
-- Internal carry/borrow chain ensures correct operation across all 4 bits.
+**Carry/Borrow-out:**
+
+- **Addition:** `CB_out = 1` if 4-bit sum overflow occurs.  
+- **Subtraction:** `CB_out = 1` if no borrow, `0` if borrow occurs (matches MSB inversion).
+
+- The design is **combinational**, fully synthesizable, and modular.
+- Each **1-bit full adder** handles one bit and passes its carry/borrow to the next stage.
+
+
 
 ## Testbench
 
