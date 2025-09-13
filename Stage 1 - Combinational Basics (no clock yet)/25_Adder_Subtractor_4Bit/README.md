@@ -12,14 +12,14 @@ A **VHDL project** implementing a **4-bit combinational adder-subtractor**. The 
 ## Table of Contents
 
 - [4-Bit Adder-Subtractor VHDL Project](#4-bit-adder-subtractor-vhdl-project)
-  - [Table of Contents](#table-of-contents)
-  - [Project Description](#project-description)
-  - [Entity Overview](#entity-overview)
-  - [Architecture](#architecture)
-  - [Testbench](#testbench)
-  - [Simulation](#simulation)
-  - [Expected Results](#expected-results)
-  - [Test Results](#test-results)
+- [Table of Contents](#table-of-contents)
+- [Project Description](#project-description)
+- [Entity Overview](#entity-overview)
+- [Architecture](#architecture)
+- [Testbench](#testbench)
+- [Simulation](#simulation)
+- [Expected Results](#expected-results)
+- [Test Results](#test-results)
 
 ## Project Description
 
@@ -38,7 +38,7 @@ The adder-subtractor is implemented using **1-bit full adders chained together**
 
 ## Entity Overview
 
-@@@
+```vhdl
 ENTITY Adder_Subtractor_4Bit IS
     PORT (
         A      : IN  STD_LOGIC_VECTOR(3 DOWNTO 0); -- 4-bit input A
@@ -48,7 +48,7 @@ ENTITY Adder_Subtractor_4Bit IS
         CB_out : OUT STD_LOGIC                      -- Carry-out / Borrow-out
     );
 END Adder_Subtractor_4Bit;
-@@@
+```
 
 | Signal | Direction | Description                     |
 | ------ | --------- | ------------------------------- |
@@ -64,7 +64,7 @@ END Adder_Subtractor_4Bit;
 - Carry/borrow out of each stage propagates to the next.
 - Subtraction is implemented using **two's complement**:
 
-@@@
+```vhdl
 -- Modified B for subtraction
 B_mod = B XOR Sub
 
@@ -77,7 +77,7 @@ S = A + B_mod + Sub
 -- Carry/Borrow-out
 -- Addition: CB_out = 1 if 4-bit sum overflow occurs
 -- Subtraction: CB_out = 1 if no borrow, 0 if borrow occurs (matches MSB inversion)
-@@@
+```
 
 - Internal carry/borrow chain ensures correct operation across all 4 bits.
 
@@ -85,7 +85,7 @@ S = A + B_mod + Sub
 
 The **self-checking testbench** verifies all possible input combinations for `A` and `B`:
 
-@@@
+```vhdl
 -- For addition
 temp_result := resize(A_u,5) + resize(B_u,5)
 expected_CB_out := temp_result(4)
@@ -95,7 +95,7 @@ expected_S := temp_result(3 DOWNTO 0)
 temp_result := resize(A_u,5) - resize(B_u,5)
 expected_CB_out := not temp_result(4)  -- borrow flag
 expected_S := temp_result(3 DOWNTO 0)
-@@@
+```
 
 - Automatically checks **all 256 combinations of `A` and `B`** for addition and subtraction.
 - Reports detailed error messages if the DUT output does not match expected sum/difference or carry/borrow.
@@ -106,32 +106,32 @@ expected_S := temp_result(3 DOWNTO 0)
 Using ModelSim, simulation steps:
 
 1. Create and map work library:
-@@@
+```vhdl
 vlib work
 vmap work work
-@@@
+```
 
 2. Compile design and testbench:
-@@@
+```vhdl
 vcom FullAdder.vhd
 vcom Adder_Subtractor_4Bit.vhd
 vcom Adder_Subtractor_4Bit_tb.vhd
-@@@
+```
 
 3. Load and simulate:
-@@@
+```vhdl
 vsim work.Adder_Subtractor_4Bit_tb
-@@@
+```
 
-4. Optional: add all signals to waveform:
-@@@
+4. Optional: add all signals to the waveform:
+```vhdl
 add wave *
-@@@
+```
 
 5. Run complete simulation:
-@@@
+```vhdl
 run -all
-@@@
+```
 
 - Check console or waveform for assertion messages and signal behavior.
 
@@ -139,27 +139,52 @@ run -all
 
 **Addition:**
 
-- Sum `S = A + B` (mod 16)
-- Carry-out `CB_out = 1` if sum > 15, else 0
+$$
+S = (A + B) \bmod 16
+$$
+
+**Carry-out:**
+
+$$
+CB\_{out} =
+\begin{cases} 
+1 & \text{if sum exceeds 15 (overflow)} \\
+\\
+0 & \text{otherwise}
+\end{cases}
+$$
 
 **Subtraction:**
 
-- Difference `S = A - B` (mod 16)
-- Borrow-out `CB_out = 1` if no borrow, 0 if borrow occurs (MSB inversion)
+$$
+S = (A - B) \bmod 16 = A + (\text{2's complement of } B) = A + (\overline{B} + 1)
+$$
+
+**Borrow-out:**
+
+$$
+CB\_{out} =
+\begin{cases} 
+0 & \text{if borrow occurs } (A < B) \\
+\\
+1 & \text{if no borrow } (A \ge B)
+\end{cases}
+$$
 
 **Example:**
 
-@@@
+```vhdl
 A = 1011_2 (11), B = 1110_2 (14)
 
 -- Addition
 S = (11 + 14) mod 16 = 9
-CB_out = 1
+CB_out = 1  -- carry occurred
 
 -- Subtraction
 S = (11 - 14) mod 16 = 13
 CB_out = 0  -- borrow occurred
-@@@
+```
+
 
 ## Test Results
 
