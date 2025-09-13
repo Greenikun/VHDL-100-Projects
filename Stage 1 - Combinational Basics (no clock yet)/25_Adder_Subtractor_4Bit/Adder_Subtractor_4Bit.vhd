@@ -6,43 +6,50 @@ USE IEEE.std_logic_1164.ALL;
 -- ========================
 ENTITY Adder_Subtractor_4Bit IS
     PORT (
-        A      : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
-        B      : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
-        Sub    : IN  STD_LOGIC;  -- 0 = Add, 1 = Subtract
-        S      : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-        CB_out : OUT STD_LOGIC     -- carry-out / borrow-out
+        A      : IN  STD_LOGIC_VECTOR(3 DOWNTO 0); -- 4-bit input A
+        B      : IN  STD_LOGIC_VECTOR(3 DOWNTO 0); -- 4-bit input B
+        Sub    : IN  STD_LOGIC;                     -- Control: 0 = Add, 1 = Subtract
+        S      : OUT STD_LOGIC_VECTOR(3 DOWNTO 0); -- 4-bit sum/difference output
+        CB_out : OUT STD_LOGIC                      -- Carry-out (addition) / Borrow-out (subtraction)
     );
 END Adder_Subtractor_4Bit;
 
 ARCHITECTURE Behaviour OF Adder_Subtractor_4Bit IS
-    -- Carry/Borrow chain
+    -- Carry/Borrow propagation chain: CB_chain(0) is initial carry/borrow, CB_chain(4) is final carry/borrow
     SIGNAL CB_chain : STD_LOGIC_VECTOR(4 DOWNTO 0);
 
-    -- Modified B (B XOR Sub)
+    -- Modified B for subtraction (B XOR Sub)
     SIGNAL B_mod : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
-    -- Full Adder Component
+    -- Full Adder Component Declaration
     COMPONENT FullAdder IS
         PORT (
-            A_1bit   : IN  STD_LOGIC;
-            B_1bit   : IN  STD_LOGIC;
-            Cin_1bit : IN  STD_LOGIC;
-            S_1bit   : OUT STD_LOGIC;
-            Cout_1bit: OUT STD_LOGIC
+            A_1bit   : IN  STD_LOGIC; -- 1-bit input A
+            B_1bit   : IN  STD_LOGIC; -- 1-bit input B (or modified for subtraction)
+            Cin_1bit : IN  STD_LOGIC; -- Carry-in / Borrow-in
+            S_1bit   : OUT STD_LOGIC; -- 1-bit sum/difference output
+            Cout_1bit: OUT STD_LOGIC  -- Carry-out / Borrow-out
         );
     END COMPONENT;
 
 BEGIN
-    -- Prepare modified B for subtraction
+    -- ================================
+    -- Prepare B_mod for subtraction
+    -- If Sub = 1, B is complemented (B XOR 1 = ~B)
+    -- If Sub = 0, B_mod = B (B XOR 0 = B)
+    -- ================================
     B_mod(0) <= B(0) XOR Sub;
     B_mod(1) <= B(1) XOR Sub;
     B_mod(2) <= B(2) XOR Sub;
     B_mod(3) <= B(3) XOR Sub;
 
-    -- Initial carry-in = Sub (0 for add, 1 for subtract)
+    -- Initial carry-in = Sub (0 for addition, 1 for subtraction to implement two's complement)
     CB_chain(0) <= Sub;
 
+    -- ================================
     -- Instantiate 4 Full Adders
+    -- Each Full Adder handles one bit, chain carries/borrows through CB_chain
+    -- ================================
     FAS0 : FullAdder PORT MAP(
         A_1bit   => A(0),
         B_1bit   => B_mod(0),
@@ -75,7 +82,7 @@ BEGIN
         Cout_1bit=> CB_chain(4)
     );
 
-    -- Output carry/borrow
+    -- Output final carry/borrow
     CB_out <= CB_chain(4);
 
 END Behaviour;
@@ -88,16 +95,19 @@ USE IEEE.std_logic_1164.ALL;
 
 ENTITY FullAdder IS
     PORT (
-        A_1bit   : IN  STD_LOGIC;
-        B_1bit   : IN  STD_LOGIC;
-        Cin_1bit : IN  STD_LOGIC;
-        S_1bit   : OUT STD_LOGIC;
-        Cout_1bit: OUT STD_LOGIC
+        A_1bit   : IN  STD_LOGIC;  -- 1-bit input A
+        B_1bit   : IN  STD_LOGIC;  -- 1-bit input B
+        Cin_1bit : IN  STD_LOGIC;  -- Carry-in / Borrow-in
+        S_1bit   : OUT STD_LOGIC;  -- 1-bit sum/difference
+        Cout_1bit: OUT STD_LOGIC   -- Carry-out / Borrow-out
     );
 END FullAdder;
 
 ARCHITECTURE Behaviour OF FullAdder IS
 BEGIN
+    -- Compute sum/difference
     S_1bit    <= A_1bit XOR B_1bit XOR Cin_1bit;
+
+    -- Compute carry-out / borrow-out
     Cout_1bit <= (A_1bit AND B_1bit) OR (B_1bit AND Cin_1bit) OR (Cin_1bit AND A_1bit);
 END Behaviour;
