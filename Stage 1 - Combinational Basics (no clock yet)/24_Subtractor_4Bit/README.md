@@ -9,21 +9,21 @@
 
 A **VHDL project** implementing a **4-bit combinational subtractor**. The project includes a **self-checking testbench** that verifies all possible input combinations automatically.
 
----
+
 
 ## Table of Contents
 
 - [4-Bit Subtractor VHDL Project](#4-bit-subtractor-vhdl-project)
-  - [Table of Contents](#table-of-contents)
-  - [Project Description](#project-description)
-  - [Entity Overview](#entity-overview)
-  - [Architecture](#architecture)
-  - [Testbench](#testbench)
-  - [Simulation](#simulation)
-  - [Expected Results](#expected-results)
-  - [Test Results](#test-results)
+- [Table of Contents](#table-of-contents)
+- [Project Description](#project-description)
+- [Entity Overview](#entity-overview)
+- [Architecture](#architecture)
+- [Testbench](#testbench)
+- [Simulation](#simulation)
+- [Expected Results](#expected-results)
+- [Test Results](#test-results)
 
----
+
 
 ## Project Description
 
@@ -39,7 +39,7 @@ The subtractor is implemented using **full subtractor components chained togethe
 - Purely combinational, synthesizable, and modular.
 - Exhaustive self-checking testbench covering all input combinations.
 
----
+
 
 ## Entity Overview
 
@@ -67,18 +67,24 @@ END Subtractor_4Bit;
 - Borrow-out of each stage propagates to the next.
 - Difference `D` is calculated as:
   
-$$
-D = A - B = A + (\text{2's complement of } B) = A + (\overline{B} + 1)
-$$
-- Borrow-out `Bout` is calculated as:
+**Difference:**
 
 $$
-B_{out} = 
+\displaystyle D = A - B = A + (\text{2's complement of } B) = A + (\overline{B} + 1)
+$$
+
+**Borrow-out:**
+
+$$
+Bout_{\text{expected}} = 
 \begin{cases} 
-1 & \text{if } A < B \\[2mm]
+1 & \text{if } A < B \\
+\\
+\\
 0 & \text{if } A \ge B
 \end{cases}
 $$
+
 - Internal borrow chain ensures correct subtraction across all bits.
 
 ## Testbench
@@ -130,28 +136,39 @@ run -all
 **Difference:**
 
 $$
-D = (A - B) \bmod 16
+D = A - B = A + (\text{2's complement of } B) = A + (\overline{B} + 1) \pmod{16}
 $$
 
 **Borrow-out:**
 
 $$
-B_{out} = 
+Bout_{\text{expected}} = 
 \begin{cases} 
-1 & \text{if } A < B \\[1mm]
+1 & \text{if } A < B \\
+\\
+\\
 0 & \text{if } A \ge B
 \end{cases}
 $$
 
-**Example:** For \(A = 1011_2\) (11) and \(B = 1110_2\) (14)
+
+
+**Example:** 
 
 $$
-D = (11 - 14) \bmod 16 = 13
+A = 1011_2 \ (11), \quad B = 1110_2 \ (14) 
 $$
 
 $$
-B_{out} = 1
+D = (11 - 14) \bmod 16 = 13 \\
 $$
+
+$$
+Bout_{\text{expected}} = 1
+$$
+
+
+
 
 The **testbench** automatically checks **all combinations of A and B** and verifies correctness.
 
