@@ -42,7 +42,7 @@ This repository serves as a comprehensive resource for anyone looking to learn o
 - [x] 22. [Full adder](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/22_FullAdder).
 - [x] 23. [4-Bit Ripple Carry Adder](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/23_Ripple_Carry_Adder_4_Bit/).
 - [x] 24. [4-bit subtractor](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/24_Subtractor_4Bit/).
-- [ ] 25. 4-bit adder-subtractor (selectable with a control signal)  
+- [x] 25. [4-bit adder-subtractor (selectable with a control signal)](Stage%201%20-%20Combinational%20Basics%20(no%20clock%20yet)/25_Adder_Subtractor_4Bit/).
 - [ ] 26. 4-bit magnitude comparator  
 
 
