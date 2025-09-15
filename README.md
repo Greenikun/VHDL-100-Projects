@@ -43,7 +43,7 @@ This repository serves as a comprehensive resource for anyone looking to learn o
 - [x] 23. [4-Bit Ripple Carry Adder](Stage%201%20-%20Combinational%20Basics/23_Ripple_Carry_Adder_4_Bit/).
 - [x] 24. [4-bit subtractor](Stage%201%20-%20Combinational%20Basics/24_Subtractor_4Bit/).
 - [x] 25. [4-bit adder-subtractor (selectable with a control signal)](Stage%201%20-%20Combinational%20Basics/25_Adder_Subtractor_4Bit/).
-- [ ] 26. [Cascadable n-bit Comparator](Stage%201%20-%20Combinational%20Basics/26_CascadableNbitComparator/).
+- [ ] 26. [Cascadable n-bit Comparator (Ongoing)](Stage%201%20-%20Combinational%20Basics/26_CascadableNbitComparator/).
 
 
 
