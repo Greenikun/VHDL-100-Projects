@@ -18,32 +18,32 @@ This repository serves as a comprehensive resource for anyone looking to learn o
 ### Stage 1 – Combinational Basics (no clock yet)  
 *Focus: Boolean logic, concurrent assignments, and basic combinational structures.*
 
-- [ ] 01. [AND gate](Stage%201%20-%20Combinational%20Basics/01_AND_GATE/).
-- [ ] 02. [OR gate](Stage%201%20-%20Combinational%20Basics/02_OR_GATE/).
-- [ ] 03. [NOT gate](Stage%201%20-%20Combinational%20Basics/03_NOT_Gate/).
-- [ ] 04. [NAND gate](Stage%201%20-%20Combinational%20Basics/04_NAND_Gate/).
-- [ ] 05. [NOR gate](Stage%201%20-%20Combinational%20Basics/05_NOR_GATE/).
-- [ ] 06. [XOR gate](Stage%201%20-%20Combinational%20Basics/06_XOR_GATE/).
-- [ ] 07. [XNOR gate](Stage%201%20-%20Combinational%20Basics/07_XNOR_GATE/).
-- [ ] 08. [2-input multiplexer (2:1 MUX)](Stage%201%20-%20Combinational%20Basics/08_2to1_MUX/).
-- [ ] 09. [4-input multiplexer (4:1 MUX)](Stage%201%20-%20Combinational%20Basics/09_4to1_MUX/).
-- [ ] 10. [8-input multiplexer (8:1 MUX)](Stage%201%20-%20Combinational%20Basics/10_8to1_MUX/).
-- [ ] 11. [1-to-2 demultiplexer](Stage%201%20-%20Combinational%20Basics/11_1to2_deMUX/).
-- [ ] 12. [1-to-4 demultiplexer](Stage%201%20-%20Combinational%20Basics/12_1to4_deMUX/).
-- [ ] 13. [2-to-4 decoder](Stage%201%20-%20Combinational%20Basics/13_Decoder2to4/).
-- [ ] 14. [3-to-8 decoder](Stage%201%20-%20Combinational%20Basics/14_Decoder3to8/).
-- [ ] 15. [Priority encoder (8-to-3)](Stage%201%20-%20Combinational%20Basics/15_Priority_Encoder/).
-- [ ] 16. [7-segment display driver (0–9)](Stage%201%20-%20Combinational%20Basics/16_SevenSeg_Driver/).
-- [ ] 17. [Binary to Gray code converter](Stage%201%20-%20Combinational%20Basics/17_Binary_to_Gray_Code_Converter/).
-- [ ] 18. [Gray code to binary converter](Stage%201%20-%20Combinational%20Basics/18_Gray_Code_to_Binary_Converter/).
-- [ ] 19. [4-bit comparator](Stage%201%20-%20Combinational%20Basics/19_Comparator4Bit).
-- [ ] 20. [8-bit comparator](Stage%201%20-%20Combinational%20Basics/20_Comparator8Bit).
-- [ ] 21. [Half adder](Stage%201%20-%20Combinational%20Basics/21_HalfAdder).  
-- [ ] 22. [Full adder](Stage%201%20-%20Combinational%20Basics/22_FullAdder).
-- [ ] 23. [4-Bit Ripple Carry Adder](Stage%201%20-%20Combinational%20Basics/23_Ripple_Carry_Adder_4_Bit/).
-- [ ] 24. [4-bit subtractor](Stage%201%20-%20Combinational%20Basics/24_Subtractor_4Bit/).
-- [ ] 25. [4-bit adder-subtractor (selectable with a control signal)](Stage%201%20-%20Combinational%20Basics/25_Adder_Subtractor_4Bit/).
-- [ ] 26. [Cascadable n-bit Comparator (Ongoing)](Stage%201%20-%20Combinational%20Basics/26_CascadableNbitComparator/).
+- [ ] 01. AND Gate
+- [ ] 02. OR Gate
+- [ ] 03. NOT Gate
+- [ ] 04. NAND Gate
+- [ ] 05. NOR Gate
+- [ ] 06. XOR Gate
+- [ ] 07. XNOR Gate
+- [ ] 08. 2 input multiplexer
+- [ ] 09. 4 input multiplexer
+- [ ] 10. 8 input multiplexer
+- [ ] 11. 1 to 2 demultiplexer
+- [ ] 12. 1 to 4 demultiplexer
+- [ ] 13. 2 to 4 decoder
+- [ ] 14. 3 to 8 decoder
+- [ ] 15. Priority Encoder (8 to 3)
+- [ ] 16. 7 segment display driver
+- [ ] 17. Binary to Gray Code Converter
+- [ ] 18. Gray Code to Binary Converter
+- [ ] 19. 4 Bit Comparator
+- [ ] 20. 8 Bit Comparator
+- [ ] 21. Half Adder
+- [ ] 22. Full Adder
+- [ ] 23. 4 Bit Ripple Carry Adder
+- [ ] 24. 4 Bit subtractor
+- [ ] 25. 4 Bit adder (selectable with a control signal)
+- [ ] 26. Cascadable n-bit Comparator (ongoing)
 
 
 
